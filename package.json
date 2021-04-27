@@ -1,0 +1,69 @@
+{
+  "name": "mars-webapp",
+  "version": "0.1.0",
+  "private": true,
+  "proxy": "http://localhost:8080",
+  "dependencies": {
+    "@testing-library/jest-dom": "^5.11.10",
+    "@testing-library/react": "^11.2.6",
+    "@testing-library/user-event": "^13.1.2",
+    "@types/jest": "^26.0.22",
+    "@types/react": "^17.0.3",
+    "@types/react-dom": "^17.0.3",
+    "autoprefixer": "10.x",
+    "axios": "^0.21.1",
+    "cross-env": "7.x",
+    "esri-loader": "^3.0.0",
+    "npm-run-all": "4.x",
+    "postcss": "8.x",
+    "postcss-cli": "8.x",
+    "postcss-preset-env": "6.x",
+    "query-string": "^7.0.0",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
+    "react-feather": "^2.0.9",
+    "react-router-dom": "^5.2.0",
+    "react-scripts": "4.0.3",
+    "react-toastify": "^7.0.3",
+    "tailwindcss": "2.x",
+    "typescript": "4.x"
+  },
+  "scripts": {
+    "start": "HOST=localhost DANGEROUSLY_DISABLE_HOST_CHECK=true run-p watch:css react-scripts:start",
+    "build": "run-s build:css react-scripts:build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject",
+    "build:css": "cross-env TAILWIND_MODE=build NODE_ENV=production postcss src/styles/tailwind.css -o src/styles/index.css",
+    "watch:css": "cross-env TAILWIND_MODE=watch NODE_ENV=development postcss src/styles/tailwind.css -o src/styles/index.css --watch",
+    "react-scripts:start": "sleep 5 && react-scripts start",
+    "react-scripts:build": "react-scripts build"
+  },
+  "eslintConfig": {
+    "extends": "react-app",
+    "overrides": [
+      {
+        "files": "**/*.{tsx,ts}",
+        "rules": {
+          "react-hooks/exhaustive-deps": "off"
+        }
+      }
+    ]
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "devDependencies": {
+    "@types/node": "^14.14.41",
+    "@types/query-string": "^6.3.0",
+    "@types/react-router-dom": "^5.1.7"
+  }
+}

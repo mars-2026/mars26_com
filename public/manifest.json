@@ -1,0 +1,27 @@
+{
+  "short_name": "Mars26",
+  "name": "Mars26 - High Resolution Mars Map",
+  "description": "Tweet from Mars, on our open source Mars map built on NASA and Caltech CTX, Viking, MOLA, HRSC image sources",
+  "homepage_url": "https://mars26.com",
+  "icons": [
+    {
+      "src": "favicon.ico",
+      "sizes": "64x64 32x32 24x24 16x16",
+      "type": "image/x-icon"
+    },
+    {
+      "src": "logo192.png",
+      "type": "image/png",
+      "sizes": "192x192"
+    },
+    {
+      "src": "logo512.png",
+      "type": "image/png",
+      "sizes": "512x512"
+    }
+  ],
+  "start_url": ".",
+  "display": "standalone",
+  "theme_color": "#000000",
+  "background_color": "#ffffff"
+}

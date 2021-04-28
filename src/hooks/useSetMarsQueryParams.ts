@@ -25,7 +25,7 @@ export default function useSetMarsQueryParams(sceneView: any) {
 
 function setMarsQueryParams(sceneView: any) {
   const marsUrlParams = getMarsQueryParams(sceneView);
-  window.location.hash = queryString.stringify(marsUrlParams);
+  window.history.replaceState(marsUrlParams, document.title, queryString.stringify(marsUrlParams));
 }
 
 function getMarsQueryParams(sceneView: any) {
